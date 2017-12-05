@@ -64,7 +64,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			result = "=3 ="
 		case "早安":
 			result = "大家早安"
-		case "@@"
+		case "@@":
 			result = "@@"
 		}
 		return result
