@@ -18,7 +18,11 @@ import (
 	"net/http"
 	"os"
 	"strings"
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 396b0b8bf62ff76fcc232dc41365173b845cb671
 	"github.com/line/line-bot-sdk-go/linebot"
 )
 
@@ -62,8 +66,11 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		var result string
 		if strings.Contains(str, "G仔") {
 			result = "@@"
+<<<<<<< HEAD
 		}esle if strings.Contains(str, "G在幹嘛") {
 			result = "趕稿去= 3="
+=======
+>>>>>>> 396b0b8bf62ff76fcc232dc41365173b845cb671
 		}
 
 		switch str {
