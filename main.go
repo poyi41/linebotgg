@@ -52,6 +52,8 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+"不是啊@@")).Do(); err != nil {
 					log.Print(err)
 				}
+			default:
+				ot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我就試試")).Do()
 			}
 		}
 	}
