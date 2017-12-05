@@ -77,9 +77,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			log.Print(userID+": "+str)
 		}
 */
-		d1 := []byte(userID + "\n")
 		log.Print(userID+": "+str)
-		ioutil.WriteFile("/log.txt", d1, 0644)
 		if(len(result) != 0){
 			if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
 				log.Print(errStr)
