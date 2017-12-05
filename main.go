@@ -50,13 +50,13 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-					returnMsg(message.Text, event.Source.UserID)
+					returnMsg(message.Text, event.Source.UserID, event.ReplyToken)
 			}
 		}
 	}
 	}
 
-	func returnMsg(str string, userID string){
+	func returnMsg(str string, userID string, rpyToken string){
 		var result string
 		if strings.Contains(str, "G仔") {
 			result = "@@"
@@ -75,7 +75,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			log.Print(userID+": "+str)
 		}
 
-		if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(result)).Do(); err != nil {
+		if _, err = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); err != nil {
 			log.Print(err)
 		}
 	}
