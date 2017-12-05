@@ -74,7 +74,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		case "@@":
 			result = "哇咔咔"
 		default:
-			result = source.UserID
+			result = linebot.source.UserID
 		}
 
 		return result
