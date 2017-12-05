@@ -56,7 +56,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	}
 
-	func returnMsg(str string, userID string, rpyToken string, errStr string){
+	func returnMsg(str string, userID string, rpyToken string, errStr error){
 		var result string
 		if strings.Contains(str, "G仔") {
 			result = "@@"
