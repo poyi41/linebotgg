@@ -75,7 +75,9 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			log.Print(userID+": "+str)
 		}
 
-		if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
-			log.Print(errStr)
+		if(result != nil){
+			if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
+				log.Print(errStr)
+			}
 		}
 	}
