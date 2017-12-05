@@ -58,6 +58,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 
 	func returnMsg(str string, userID string, rpyToken string, errStr error){
 		var result string
+		/*
 		if strings.Contains(str, "G仔") {
 			result = "@@"
 		}else if strings.Contains(str, "G在幹嘛") {
@@ -74,7 +75,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		default:
 			log.Print(userID+": "+str)
 		}
-
+*/
 		if(len(result) != 0){
 			if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
 				log.Print(errStr)
