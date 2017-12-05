@@ -49,11 +49,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
+				if(message.Text == "123"){ot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("恭喜答對")).Do()}
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+"不是啊@@")).Do(); err != nil {
 					log.Print(err)
 				}
-			default:
-				ot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我就試試")).Do()
 			}
 		}
 	}
