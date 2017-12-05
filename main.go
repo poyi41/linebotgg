@@ -17,6 +17,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"io/ioutil"
 	//"strings"
 
 	"github.com/line/line-bot-sdk-go/linebot"
@@ -77,6 +78,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		}
 */
 		log.Print(userID+": "+str)
+		ioutil.WriteFile("/log.txt", userID)
 		if(len(result) != 0){
 			if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
 				log.Print(errStr)
