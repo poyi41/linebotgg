@@ -58,5 +58,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	func returnMsg(str string) string {
-		return str
+		var result string
+		switch str {
+		case "中文豬":
+			result = "=3 ="
+		}
+		return result
 	}
