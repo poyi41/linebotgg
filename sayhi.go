@@ -21,7 +21,7 @@ func sayhi(str string, userID string) string {
 			result = userWhom + "晚安丫"
 		} else if strings.Contains(str, "在幹嘛") {
 			result = "趕稿去= 3="
-		} else if strings.Contains(str, "在幹嘛") {
+		} else if strings.Contains(str, "好久不見") {
 			result = userWhom + "好久不見，哇咔咔"
 		}
 	} else if strings.Contains(str, "中文豬") {
