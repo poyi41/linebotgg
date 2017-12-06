@@ -73,6 +73,8 @@ func getName(userID string) string {
 		userWhom = "poyi哥"
 	case "U9f0778d04a28fcd15e3b1417bd5e308b": //紅茶
 		userWhom = "大哥"
+	case "U7ea7e8a2300bfbaaf58108af1786cc89": //柳丁
+		userWhom = "柳丁"
 	}
 	return userWhom
 }
