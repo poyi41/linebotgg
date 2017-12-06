@@ -50,15 +50,38 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-					returnMsg(message.Text, event.Source.UserID, event.ReplyToken, err)
+				returnMsg(message.Text, event.Source.UserID, event.ReplyToken, err)
 			}
 		}
 	}
-	}
+}
 
-	func returnMsg(str string, userID string, rpyToken string, errStr error){
-		var result string
-		/*
+func returnMsg(str string, userID string, rpyToken string, errStr error) {
+	var result string
+	var userWhom string
+	switch userID {
+	case "Uaa8f39e4ce4da3adb16e05cbcf52c919": //球球
+		userWhom = "球球"
+	case "U677c9c32e514ffa1ab1102e6e882315d": //天又
+		userWhom = "天又"
+	case "U0d1c8ed81dd9a9cfd402be5fb426e019": //姆斯
+		userWhom = "姆斯"
+	case "Uf141820779edea05ac76f468f9634290": //子祐
+		userWhom = "子祐"
+	case "U6cad7524aa07e15299355ee6173267af": //爸爸
+		userWhom = "爸爸"
+	case "Uf962a64b052b96faf22860b096e71643": //阿華
+		userWhom = "阿華"
+	case "U76fb3ac2fc172920e41873d8dbe615a1": //姐姐
+		userWhom = "姐姐"
+	case "U954ea584f53c0f4eb857f3b5ade713c3": //餅乾
+		userWhom = "餅乾"
+	case "U6e8c5d2f59d2905b34b3bbccbba04733": //白白
+		userWhom = "白白"
+	case "U4739962db979ae81526e5e006f5f5174": //poyi
+		userWhom = "poyi"
+	}
+	/*
 		if strings.Contains(str, "G仔") {
 			result = "@@"
 		}else if strings.Contains(str, "G在幹嘛") {
@@ -75,11 +98,11 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		default:
 			log.Print(userID+": "+str)
 		}
-*/
-		log.Print(userID+": "+str)
-		if(len(result) != 0){
-			if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
-				log.Print(errStr)
-			}
+	*/
+	log.Print(userWhom + ": " + str)
+	if len(result) != 0 {
+		if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
+			log.Print(errStr)
 		}
 	}
+}
