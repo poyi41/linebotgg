@@ -26,6 +26,8 @@ func sayhi(str string, userID string) string {
 		switch userWhom {
 		case "大哥":
 			result = "大哥送我贴图=3="
+		case "白白":
+			result = "怎樣@@?"
 		default:
 			result = userWhom + "怎么了@@?"
 		}
