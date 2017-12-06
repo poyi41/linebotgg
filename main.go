@@ -99,7 +99,12 @@ func returnMsg(str string, userID string, rpyToken string, errStr error) {
 			log.Print(userID+": "+str)
 		}
 	*/
-	log.Print(userWhom + ": " + str)
+	if len(userWhom) != 0 {
+		log.Print(userWhom + ": " + str)
+	} else {
+		log.Print(userID + ": " + str)
+	}
+
 	if len(result) != 0 {
 		if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
 			log.Print(errStr)
