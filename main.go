@@ -80,6 +80,10 @@ func returnMsg(str string, userID string, rpyToken string, errStr error) {
 		userWhom = "白白"
 	case "U4739962db979ae81526e5e006f5f5174": //poyi
 		userWhom = "poyi"
+	case "U9f0778d04a28fcd15e3b1417bd5e308b": //紅茶
+		userWhom = "紅茶"
+	default:
+		userWhom = userID
 	}
 	/*
 		if strings.Contains(str, "G仔") {
@@ -99,11 +103,7 @@ func returnMsg(str string, userID string, rpyToken string, errStr error) {
 			log.Print(userID+": "+str)
 		}
 	*/
-	if len(userWhom) != 0 {
-		log.Print(userWhom + ": " + str)
-	} else {
-		log.Print(userID + ": " + str)
-	}
+	log.Print(userWhom + ": " + str)
 
 	if len(result) != 0 {
 		if _, errStr = bot.ReplyMessage(rpyToken, linebot.NewTextMessage(result)).Do(); errStr != nil {
