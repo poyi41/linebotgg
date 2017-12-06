@@ -10,7 +10,17 @@ func sayhi(str string, userID string) string {
 	var userWhom string
 	userWhom = getName(userID)
 
-	if strings.Contains(str, "G仔") {
+	if strings.Contains(str, "中文豬") {
+		result = userWhom + "别这样= 3="
+	} else if strings.Contains(str, "@@") {
+		result = "＠＠"
+	} else if strings.Contains(str, "嗨洞") {
+		result = "((o))"
+	} else if strings.Contains(str, "餅乾") {
+		result = "我宁愿摩擦饼干"
+	} else if strings.Contains(str, "慶記") {
+		result = "等我去台湾后一定要带我吃一次庆記"
+	} else if strings.Contains(str, "G仔") {
 		result = userWhom + "怎么了@@?"
 
 		if strings.Contains(str, "午安") {
@@ -24,16 +34,6 @@ func sayhi(str string, userID string) string {
 		} else if strings.Contains(str, "好久不見") {
 			result = userWhom + "好久不見，哇咔咔"
 		}
-	} else if strings.Contains(str, "中文豬") {
-		result = userWhom + "别这样= 3="
-	} else if strings.Contains(str, "@@") {
-		result = "＠＠"
-	} else if strings.Contains(str, "嗨洞") {
-		result = "((o))"
-	} else if strings.Contains(str, "餅乾") {
-		result = "我宁愿摩擦饼干"
-	} else if strings.Contains(str, "慶記") {
-		result = "等我去台湾后一定要带我吃一次庆記"
 	}
 
 	return result
