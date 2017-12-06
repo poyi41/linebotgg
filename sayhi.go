@@ -30,6 +30,8 @@ func sayhi(str string, userID string) string {
 		result = "＠＠"
 	} else if strings.Contains(str, "嗨洞") {
 		result = "((o))"
+	} else if strings.Contains(str, "餅乾") {
+		result = "我宁愿摩擦饼干"
 	}
 
 	return result
