@@ -6,6 +6,7 @@ import (
 
 func sayhi(str string, userID string) string {
 	var result string
+	var userWhom string
 	switch userID {
 	case "Uaa8f39e4ce4da3adb16e05cbcf52c919": //球球
 		userWhom = "球球哥"
