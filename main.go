@@ -57,8 +57,9 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func returnMsg(str string, userID string, rpyToken string, errStr error) {
-	var result := sayhi(str, userID)
+	var result string
 	var userWhom string
+	result = sayhi(str, userID)
 	switch userID {
 	case "Uaa8f39e4ce4da3adb16e05cbcf52c919": //球球
 		userWhom = "球球"
