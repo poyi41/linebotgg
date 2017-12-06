@@ -5,6 +5,7 @@ import (
 )
 
 func sayhi(str string, userID string) string {
+	str = strings.ToUpper(str)
 	var result string
 	var userWhom string
 	switch userID {
