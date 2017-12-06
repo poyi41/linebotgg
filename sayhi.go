@@ -40,6 +40,8 @@ func sayhi(str string, userID string) string {
 			result = "趕稿去= 3="
 		} else if strings.Contains(str, "好久不見") {
 			result = userWhom + "好久不見，哇咔咔"
+		} else if strings.Contains(str, "吃飯沒") {
+			result = "吃了丫，" + userWhom + "你呢@@？"
 		}
 	}
 
