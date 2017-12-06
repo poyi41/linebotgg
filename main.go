@@ -80,6 +80,7 @@ func returnMsg(str string, userID string, rpyToken string, errStr error) {
 		userWhom = "白白"
 	case "U4739962db979ae81526e5e006f5f5174": //poyi
 		userWhom = "poyi"
+		result = poyiReturn(str)
 	case "U9f0778d04a28fcd15e3b1417bd5e308b": //紅茶
 		userWhom = "紅茶"
 	default:
