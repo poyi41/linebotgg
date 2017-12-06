@@ -28,6 +28,8 @@ func sayhi(str string, userID string) string {
 		result = userWhom + "别这样= 3="
 	} else if strings.Contains(str, "@@") {
 		result = "＠＠"
+	} else if strings.Contains(str, "嗨洞") {
+		result = "((o))"
 	}
 
 	return result
