@@ -21,7 +21,12 @@ func sayhi(str string, userID string) string {
 	} else if strings.Contains(str, "慶記") {
 		result = "等我去台湾后一定要带我吃一次庆記"
 	} else if strings.Contains(str, "G仔") {
-		result = userWhom + "怎么了@@?"
+		switch userWhom {
+		case "大哥":
+			result = "大哥送我贴图=3="
+		default:
+			result = userWhom + "怎么了@@?"
+		}
 
 		if strings.Contains(str, "午安") {
 			result = userWhom + "午安丫"
