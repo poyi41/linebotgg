@@ -34,12 +34,15 @@ func sayhi(str string, userID string) string {
 
 	if strings.Contains(str, "G仔") {
 		result = userWhom + "怎么了@@?"
-		if strings.Contains(str, "早安") {
-			result = userWhom + "早安啊"
-		}
+
 		if strings.Contains(str, "午安") {
 			result = userWhom + "午安啊"
 		}
+
+		if strings.Contains(str, "早安") {
+			result = userWhom + "早安啊"
+		}
+
 		if strings.Contains(str, "晚安") {
 			result = userWhom + "晚安啊"
 		}
