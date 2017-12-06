@@ -32,6 +32,8 @@ func sayhi(str string, userID string) string {
 		result = "((o))"
 	} else if strings.Contains(str, "餅乾") {
 		result = "我宁愿摩擦饼干"
+	} else if strings.Contains(str, "慶記") {
+		result = "等我去台湾后一定要带我吃一次庆記"
 	}
 
 	return result
