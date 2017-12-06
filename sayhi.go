@@ -48,7 +48,9 @@ func sayhi(str string, userID string) string {
 			result = "吃了丫，" + userWhom + "你呢@@？"
 		}
 	}
-
+	if str == "為所欲為" {
+		result = "為所欲為"
+	}
 	return result
 }
 
