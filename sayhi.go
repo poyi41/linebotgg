@@ -25,9 +25,9 @@ func sayhi(str string, userID string) string {
 	} else if strings.Contains(str, "朱國強") {
 		result = userWhom + "很故意= 3="
 	} else if strings.Contains(str, "爐石") && strings.Contains(str, "任務") {
-		result = userWhom + "所以我說有人要幫解爐石任務嗎？ 如果沒有我晚點再問一次"
+		result = "所以我說有人要幫解爐石任務嗎？ 如果沒有我晚點再問一次"
 	} else if strings.Contains(str, "生日快樂") {
-		result = userWhom + "生日快樂啊。我的心是很好吃。我的朋友都在想什麼。我的朋友們一起分享吧。我的心都碎了嗎。我們要是你的朋友都說不出來有關部門申請加入會員抽大獎？我們的心理狀態？我們要是我的朋友也能像這次我們的朋友也都非常喜歡她嗎？我們要是有人要一起努力過後才知道是什麼樣子。我的心都碎了。我的朋友都在看電視了。我的心是一樣的"
+		result = "生日快樂啊。我的心是很好吃。我的朋友都在想什麼。我的朋友們一起分享吧。我的心都碎了嗎。我們要是你的朋友都說不出來有關部門申請加入會員抽大獎？我們的心理狀態？我們要是我的朋友也能像這次我們的朋友也都非常喜歡她嗎？我們要是有人要一起努力過後才知道是什麼樣子。我的心都碎了。我的朋友都在看電視了。我的心是一樣的"
 	} else if strings.Contains(str, "G仔") {
 
 		switch userWhom {
