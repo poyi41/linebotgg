@@ -25,16 +25,16 @@ func sayhi(str string, userID string) string {
 	} else if strings.Contains(str, "朱國強") {
 		result = userWhom + "很故意= 3="
 	} else if strings.Contains(str, "爐石") && strings.Contains(str, "任務") {
-		result = "所以我說有人要幫解爐石任務嗎？ 如果沒有我晚點再問一次"
+		result = "所以我说有人要帮解炉石任务吗？如果没有我晚点再问一次"
 	} else if strings.Contains(str, "生日快樂") {
-		result = "生日快樂啊。我的心是很好吃。我的朋友都在想什麼。我的朋友們一起分享吧。我的心都碎了嗎。我們要是你的朋友都說不出來有關部門申請加入會員抽大獎？我們的心理狀態？我們要是我的朋友也能像這次我們的朋友也都非常喜歡她嗎？我們要是有人要一起努力過後才知道是什麼樣子。我的心都碎了。我的朋友都在看電視了。我的心是一樣的"
+		result = "生日快乐啊。我的心是很好吃。我的朋友都在想什么。我的朋友们一起分享吧。我的心都碎了吗。我们要是你的朋友都说不出来有关部门申请加入会员抽大奖？我们的心理状态？我们要是我的朋友也能像这次我们的朋友也都非常喜欢她吗？我们要是有人要一起努力过后才知道是什么样子。我的心都碎了。我的朋友都在看电视了。我的心是一样的"
 	} else if strings.Contains(str, "G仔") {
 
 		switch userWhom {
 		case "大哥":
 			result = "大哥送我贴图=3="
 		case "白白":
-			result = "怎么@@?"
+			result = "怎样@@?"
 		case "james哥":
 			result = strings.Replace(str, "G仔", userWhom, -1)
 		default:
@@ -43,6 +43,10 @@ func sayhi(str string, userID string) string {
 
 		if strings.Contains(str, "沒事") && userWhom == "天又哥" {
 			result = "没事就好"
+		}
+
+		if strings.Contains(str, "沒怎樣") && userWhom == "白白" {
+			result = "没怎样就好"
 		}
 
 		if strings.Contains(str, "午安") {
