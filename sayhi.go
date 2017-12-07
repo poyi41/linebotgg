@@ -30,6 +30,8 @@ func sayhi(str string, userID string) string {
 			result = "大哥送我贴图=3="
 		case "白白":
 			result = "怎樣@@?"
+		case "poyi哥":
+			result = strings.Replace(str, "G仔", userWhom, -1)
 		default:
 			result = userWhom + "怎么了@@?"
 		}
