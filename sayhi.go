@@ -52,7 +52,7 @@ func sayhi(str string, userID string) string {
 		if strings.Contains(str, "午安") {
 			result = userWhom + "午安丫"
 		} else if strings.Contains(str, "早安") {
-			result = userWhom + "早安丫"
+			result = userWhom + "早丫"
 		} else if strings.Contains(str, "晚安") {
 			result = userWhom + "晚安丫"
 		} else if strings.Contains(str, "在幹嘛") {
