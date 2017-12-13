@@ -67,6 +67,10 @@ func sayhi(str string, userID string) string {
 		result = "是不是！！"
 	}
 
+	if str == "閉嘴" {
+		result = "= 3="
+	}
+
 	if strings.Contains(str, "沒事") && userWhom == "天又哥" {
 		result = "没事就好"
 	}
